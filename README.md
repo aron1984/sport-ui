@@ -12,3 +12,4 @@ This project will be a library of sporty-looking components based on NBA team co
    - [ ] Celtics (<font color="green">green</font> <font color="white">white</font>)
    - [ ] Chicago (<font color="red">red</font> <font color="black">black</font> <font color="white">white</font>)
    - [ ] Spurs (<font color="black">black</font> <font color="gray">gray</font> <font color="white">white</font>)
+   - [ ] OKC (<font color="blue">blue</font> <font color="orange">orange</font> <font color="white">white</font>)
