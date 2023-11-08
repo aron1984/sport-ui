@@ -1,0 +1,74 @@
+.storybook-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button--rondeau{
+  border-radius: 0;
+}
+.storybook-button--rondeau{
+  border-radius: 3em;
+}
+.storybook-button--sm {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--md{
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--lg {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.storybook-button--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+/* Prueba */
+
+.storybook-button--lakers-alternative {
+  color: white;
+  background: linear-gradient(45deg, #FDB927 50%, #552583 50%);
+
+  &.bordered {
+    border: 2px solid #000000;
+  }
+}
+
+.storybook-button--lakers-primary {
+  color: white;
+  background-color: #FDB927;
+
+  &.bordered {
+    border: 2px solid #552583;
+  }
+}
+
+.storybook-button--lakers-secondary {
+  color: white;
+  background-color: #552583 ;
+
+  &.bordered {
+    border: 2px solid #FDB927;
+  }
+}
+
+
+
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
