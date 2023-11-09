@@ -8,7 +8,12 @@
   display: inline-block;
   line-height: 1;
   outline: none;
-
+  &.withIcon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 25px;
+  }
   &:active {
     transition: all 150ms linear;
     opacity: .75;
@@ -19,6 +24,15 @@
     transition: all 150ms linear;
     opacity: .85;
   }
+}
+.storybook-button--icon-sm {
+  width: 15px;
+}
+.storybook-button--icon-md {
+  width: 20px;
+}
+.storybook-button--icon-lg {
+  width: 30px;
 }
 .storybook-button--base{
   border-radius: 0;
