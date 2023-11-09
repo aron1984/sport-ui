@@ -1,0 +1,23 @@
+:root {
+    --color-nba-primary-text: #e5e5e5;
+
+    --color-lakers-primary: #FDB927;
+    --color-lakers-secondary: #552583;
+    --color-lakers-tertiary: #000000;
+    --color-lakers-cuaternary: white;
+
+    --color-celtics-primary: #007A33;
+    --color-celtics-secondary: #BA9653;
+    --color-celtics-tertiary: #963821;
+    --color-celtics-cuaternary: white;
+
+    --color-minesota-primary: #0C2340;
+    --color-minesota-secondary: #236192;
+    --color-minesota-tertiary: #9EA2A2;
+    --color-minesota-cuaternary: #78BE20;
+
+    --color-default-primary: #0E2240;
+    --color-default-secondary: #FEC524;
+    --color-default-tertiary: #8B2131;
+    --color-default-cuaternary: #1D428A;
+  }

@@ -1,3 +1,5 @@
+@import './../../assets/colors.css';
+
 .storybook-button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -5,8 +7,20 @@
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  outline: none;
+
+  &:active {
+    transition: all 150ms linear;
+    opacity: .75;
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  }
+  &:hover {
+    transition: all 150ms linear;
+    opacity: .85;
+  }
 }
-.storybook-button--rondeau{
+.storybook-button--base{
   border-radius: 0;
 }
 .storybook-button--rondeau{
@@ -25,50 +39,336 @@
   padding: 12px 24px;
 }
 
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
-
-/* Prueba */
-
-.storybook-button--lakers-alternative {
-  color: white;
-  background: linear-gradient(45deg, #FDB927 50%, #552583 50%);
-
-  &.bordered {
-    border: 2px solid #000000;
-  }
-}
-
+/* Lakers */
 .storybook-button--lakers-primary {
-  color: white;
-  background-color: #FDB927;
-
+  color: var(--color-lakers-secondary);
+  background-color: var(--color-lakers-primary);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
   &.bordered {
-    border: 2px solid #552583;
+    border: 2px solid var(--color-lakers-secondary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-lakers-secondary);
+      outline-offset: 4px;
+    }
   }
 }
 
 .storybook-button--lakers-secondary {
-  color: white;
-  background-color: #552583 ;
-
+  color: var(--color-lakers-primary);
+  background-color: var(--color-lakers-secondary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
   &.bordered {
-    border: 2px solid #FDB927;
+    border: 2px solid var(--color-lakers-primary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-lakers-primary);
+      outline-offset: 4px;
+    }
   }
 }
 
+.storybook-button--lakers-tertiary {
+  color: var(--color-lakers-primary);
+  background-color: var(--color-lakers-cuaternary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  border: 2px solid var(--color-lakers-secondary);
 
+  &.bordered {
+    border: 2px solid var(--color-lakers-primary);
+  }
 
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-lakers-primary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--lakers-alternative {
+  color: var(--color-lakers-cuaternary);
+  background: linear-gradient(45deg, var(--color-lakers-primary) 50%, var(--color-lakers-secondary) 50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+
+  &.bordered {
+    border: 2px solid var(--color-lakers-cuaternary);
+  }
+
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-lakers-secondary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+/* Celtics */
+.storybook-button--celtics-primary {
+  color: var(--color-celtics-secondary);
+  background-color: var(--color-celtics-primary);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-celtics-secondary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-celtics-secondary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--celtics-secondary {
+  color: var(--color-celtics-primary);
+  background-color: var(--color-celtics-secondary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-celtics-primary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-celtics-primary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--celtics-tertiary {
+  color: var(--color-celtics-primary);
+  background-color: var(--color-celtics-cuaternary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  border: 2px solid var(--color-celtics-secondary);
+  &.bordered {
+    border: 2px solid var(--color-celtics-primary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-celtics-primary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--celtics-alternative {
+  color: var(--color-celtics-cuaternary);
+  background: linear-gradient(45deg, var(--color-celtics-primary) 50%, var(--color-celtics-secondary) 50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-celtics-cuaternary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-celtics-secondary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+/* celtics */
+.storybook-button--celtics-primary {
+  color: var(--color-celtics-secondary);
+  background-color: var(--color-celtics-primary);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-celtics-secondary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-celtics-secondary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--celtics-secondary {
+  color: var(--color-celtics-primary);
+  background-color: var(--color-celtics-secondary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-celtics-primary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-celtics-primary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--celtics-tertiary {
+  color: var(--color-celtics-primary);
+  background-color: var(--color-celtics-cuaternary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  border: 2px solid var(--color-celtics-secondary);
+  &.bordered {
+    border: 2px solid var(--color-celtics-primary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-celtics-primary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--celtics-alternative {
+  color: var(--color-celtics-cuaternary);
+  background: linear-gradient(45deg, var(--color-celtics-primary) 50%, var(--color-celtics-secondary) 50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-celtics-cuaternary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-celtics-secondary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+/* minesota */
+.storybook-button--minesota-primary {
+  color: var(--color-minesota-cuaternary);
+  background-color: var(--color-minesota-primary);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-minesota-secondary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-minesota-tertiary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--minesota-secondary {
+  color: var(--color-minesota-secondary);
+  background-color: var(--color-minesota-tertiary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-minesota-tertiary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-minesota-primary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--minesota-tertiary {
+  color: var(--color-nba-primary-text);
+  background-color: var(--color-minesota-tertiary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-minesota-primary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-minesota-cuaternary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--minesota-alternative {
+  color: var(--color-minesota-cuaternary);
+  background: linear-gradient(45deg, var(--color-minesota-primary) 50%, var(--color-minesota-secondary) 50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-minesota-cuaternary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-minesota-tertiary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+/* default */
+.storybook-button--default-primary {
+  color: var(--color-default-secondary);
+  background-color: var(--color-default-primary);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-default-secondary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-default-tertiary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--default-secondary {
+  color: var(--color-default-primary);
+  background-color: var(--color-default-tertiary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-default-tertiary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-default-primary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--default-tertiary {
+  color: var(--color-default-secondary);
+  background-color: var(--color-default-tertiary) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  border: 2px solid var(--color-default-secondary);
+  &.bordered {
+    border: 2px solid var(--color-default-primary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-default-cuaternary);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.storybook-button--default-alternative {
+  color: var(--color-default-cuaternary);
+  background: linear-gradient(45deg, var(--color-default-primary) 50%, var(--color-default-secondary) 50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 1px;
+  &.bordered {
+    border: 2px solid var(--color-default-cuaternary);
+  }
+  &.animated {
+    &:focus {
+      transition: all 150ms linear;
+      outline: 3px solid var(--color-default-tertiary);
+      outline-offset: 4px;
+    }
+  }
 }
 

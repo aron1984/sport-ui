@@ -60,3 +60,13 @@ export const Alternative: Story = {
     color: 'lakers'
   },
 };
+
+export const AlternativeRondeau: Story = {
+  args: {
+    typeBtn: 'alternative',
+    label: 'Button',
+    color: 'lakers',
+    rondeau: true,
+    border: true
+  },
+};
