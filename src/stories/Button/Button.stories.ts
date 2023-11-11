@@ -67,6 +67,7 @@ export const AlternativeRondeau: Story = {
     label: 'Button',
     color: 'lakers',
     rondeau: true,
-    border: true
+    border: true,
+    img: 'https://img.icons8.com/?size=64&id=56044&format=png'
   },
 };

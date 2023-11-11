@@ -28,14 +28,16 @@ export const Button = ({
   const btnColor = border ? `storybook-button--${color}-${typeBtn} bordered` : `storybook-button--${color}-${typeBtn} `;
   const btnAnimated = animated ? `animated` : null;
   const withIcon = img ? 'withIcon' : null;
+
+  let width = '';
   const sizeIcon = () => {
-    let width;
     if(size === 'sm') {
       width = '20px';
-    } else if(size === 'md') {
-      // eslint-disable-next-line no-unused-labels
-      width: '30px';
-    } else {
+    }
+    if(size === 'md') {
+      width = '30px';
+    }
+    if(size === 'lg'){
       width = '30px'
     }
     return width
@@ -49,7 +51,7 @@ export const Button = ({
       {...props}
       >
       {
-        img && <img src={"src/assets/react.svg"} style={{width: sizeIcon(), marginRight: '10px' }} alt={label}/>
+        img !== undefined && <img src={img} style={{width: sizeIcon(), marginRight: '10px' }} alt={label}/>
       }
 
       {label}
