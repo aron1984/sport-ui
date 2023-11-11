@@ -9,7 +9,8 @@ interface ButtonProps {
   label: string;
   onClick?: () => void;
   typeBtn: 'primary' | 'secondary' | 'tertiary' | 'alert' | 'error' | "alternative"
-  color: 'lakers' | 'celtics' | 'minesota' | 'default'
+  color: 'lakers' | 'celtics' | 'minesota' | 'default',
+  customStyles?: React.CSSProperties,
 }
 
 
@@ -22,6 +23,7 @@ export const Button = ({
   typeBtn = "primary",
   color = "default",
   img,
+  customStyles,
   ...props
 }: ButtonProps) => {
   const mode =  rondeau ? 'storybook-button--rondeau' : 'storybook-button--base';
@@ -48,9 +50,10 @@ export const Button = ({
     <button
     type="button"
       className={['storybook-button', `storybook-button--${size}`, btnColor, mode, btnAnimated, withIcon].join(' ')}
+      style={customStyles}
       {...props}
       >
-      {
+                                   {
         img !== undefined && <img src={img} style={{width: sizeIcon(), marginRight: '10px' }} alt={label}/>
       }
 
